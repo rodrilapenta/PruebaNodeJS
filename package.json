@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/rodrilapenta/PruebaNodeJS#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "express": "^4.15.5"
+    "express": "^4.15.5",
+    "mongodb": "^2.2.31"
   }
 }
