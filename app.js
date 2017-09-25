@@ -18,7 +18,12 @@ MongoClient.connect(url, function(err, db) {
 	if (err) throw err;
 	db.createCollection("locations", function(err, res) {
 		if (err) throw err;
-		console.log("Collection created!");
+		console.log("'locations' collection created!");
+		db.close();
+	});
+	db.createCollection("users", function(err, res) {
+		if (err) throw err;
+		console.log("'users' collection created!");
 		db.close();
 	});
 });
@@ -32,6 +37,20 @@ app.post('/locations', function (req, res) {
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
 		db.collection("locations").insertOne(req.body, function(err, res) {
+			if (err) throw err;
+			console.log("1 document inserted");
+			db.close();
+		});
+	});
+	
+	res.send(req.body);
+});
+
+app.post('/users', function (req, res) {
+	console.log(req.body);
+	MongoClient.connect(url, function(err, db) {
+		if (err) throw err;
+		db.collection("users").insertOne(req.body, function(err, res) {
 			if (err) throw err;
 			console.log("1 document inserted");
 			db.close();
