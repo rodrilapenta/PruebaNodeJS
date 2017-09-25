@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
 
 app.post('/locations', function (req, res) {
 	console.log(req.body);
-	
 	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
 		db.collection("locations").insertOne(req.body, function(err, res) {
