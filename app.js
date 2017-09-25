@@ -7,6 +7,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
+
 /*var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://rolapenta:rodrigo@ds149134.mlab.com:49134/redbeetest";
 */
@@ -34,6 +37,6 @@ app.post('/locations', function (req, res) {
   res.send(req.body);
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at port" + app.get('port'))
+})
