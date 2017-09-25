@@ -29,11 +29,16 @@ app.get('/', function (req, res) {
 
 app.post('/locations', function (req, res) {
 	console.log(req.body);
-	db.collection("locations").insertOne(req.body, function(err, res) {
+	
+	MongoClient.connect(url, function(err, db) {
 		if (err) throw err;
-		console.log("1 document inserted");
-		db.close();
+		db.collection("locations").insertOne(req.body, function(err, res) {
+			if (err) throw err;
+			console.log("1 document inserted");
+			db.close();
+		});
 	});
+	
 	res.send(req.body);
 });
 
