@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-var MongoClient = require('mongodb').MongoClient;
+/*var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://rolapenta:rodrigo@ds149134.mlab.com:49134/redbeetest";
-
+*/
 /*MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   db.createCollection("locations", function(err, res) {
