@@ -1,0 +1,19 @@
+{
+  "name": "pruebanodejsrodrilapenta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrilapenta/PruebaNodeJS.git"
+  },
+  "author": "rodrilapenta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrilapenta/PruebaNodeJS/issues"
+  },
+  "homepage": "https://github.com/rodrilapenta/PruebaNodeJS#readme"
+}
